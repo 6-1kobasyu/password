@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link rel="icon" href="file:///C:/Users/7724190/Downloads/site/password/style/icon.png">
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<header>
+    <center>
+        <h1>ログインフォーム</h1>
+    </center>
+</header>
+<style>
+    header {
+        position: fixed;
+        color: white;
+        width: 100%;
+        height: 70px;
+        background-color: #8dc21f;
+    }
+</style>
+
+<br>
+<br>
+<br>
+
+<body>
+    <meta name="robots" content="noindex">
+    <div>
+        <!--フォーム-->
+        <form name="login_form">
+            <center>
+                <h1 class="contact-title">ログイン</h1>
+                <p>ID, Passwordご入力の上, 「認証」ボタンをクリックしてください.</p>
+            </center>
+            <div>
+
+                <center>
+                    <div>
+                        <input type="id" name="id" placeholder="ID">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="password" name="pass" placeholder="Password" onchange="nextPage()">
+                    </div>
+                </center>
+
+            </div>
+            <button type="button" style="width:100px;height:50px" onclick="button()">認証</button>
+        </form>
+
+        <script language="JavaScript" type="text/javascript">
+            function button() {
+                const password = "6161"
+                let pass = id + pwd;
+                if(pass === password){
+                    window.location = "https://6-1kobasyu.github.io/HOME/";
+                }else{
+                    alert ("パスワードが違います。")
+                }
+            }
+         
+                </script>
+
+            </script>
+        <!--ログイン処理-->
+        <script language="JavaScript" type="text/javascript">
+            function nextPage() {
+                id = document.login_form.id.value
+                pwd = document.login_form.pass.value;
+            }
+
+        </script>
+<script language="JavaScript" type="text/javascript">
+    function nextPage() {
+        id = document.login_form.id.value //ID枠に入力された値（文字列）を定義
+        pwd = document.login_form.pass.value; //Password枠に入力された値（文字列）を定義
+    }
+</script>
+    </div>
+</body>
+</html>
